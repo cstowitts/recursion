@@ -1,10 +1,13 @@
 "use strict";
 //paired with Brian
+//Cella is a great person that has a strong concept of visual measurments systems
+//I am very happy to have her a friend despite how preposterous she can be at
+//times
 
 /** product: calculate the product of an array of numbers. */
 
 function product(nums) {
-  if(nums.length === 0){
+  if (nums.length === 0) {
     return 1;
   }
   return nums[0] * product(nums.slice(1));
@@ -13,14 +16,14 @@ function product(nums) {
 /** longest: return the length of the longest word in an array of words. */
 
 function longest(words) {
-  if(words.length === 0){
+  if (words.length === 0) {
     return 0;
   }
 
   let currWerdLen = words[0].length;
   let nextWerdLen = longest(words.slice(1)).length;
 
-  if(currWerdLen > nextWerdLen){
+  if (currWerdLen > nextWerdLen) {
     return currWerdLen;
   } else {
     return nextWerdLen;
@@ -34,23 +37,23 @@ function longest(words) {
  * nextWerd = longest(["pizza", "neurosis", "poop"]) / 8 ("neurosis")
  *
  * round 2:
- * 
+ *
  * currWerd = "pizza"
  * nextWerd = longest(["neurosis", "poop"]) / 8 ("neurosis)
- * 
+ *
  * round 3:
- * 
+ *
  * currWerd = "neurosis"
  * nextWerd = longest(["poop"]) / 4 ("poop")
- * 
+ *
  * round 4:
- * 
+ *
  * currWerd = "poop"
  * nextWerd = longest([]) / 0 ("")
- * 
- * 
+ *
+ *
  * round 5:
- * 
+ *
  * currWerd = undefined
  * returns 0 ("")
  */
@@ -58,7 +61,7 @@ function longest(words) {
 /** everyOther: return a string with every other letter. */
 
 function everyOther(str) {
-  if(str.length === 0){
+  if (str.length === 0) {
     return "";
   }
 
